@@ -1,0 +1,45 @@
+<link rel="import" href="../../components/polymer/polymer.html">
+
+<polymer-element name="demo-rgb" attributes="r,g,b">
+  <template>
+    <link rel="stylesheet" href="pure-min.css">
+    <link rel="stylesheet" href="demo-rgb.css">
+
+    <div class="pure-g">
+      <div class="pure-u-4-5">
+
+        <div class="pure-g">
+          <label class="pure-u-1-5">R</label>
+          <input type="range" min="0" max="255" value="{{r}}" class="pure-u-3-5">
+          <span class="pure-u-1-5">{{r}}</span>
+        </div>
+
+        <div class="pure-g">
+          <label class="pure-u-1-5">G</label>
+          <input type="range" min="0" max="255" value="{{g}}" class="pure-u-3-5">
+          <span class="pure-u-1-5">{{g}}</span>
+        </div>
+
+        <div class="pure-g">
+          <label class="pure-u-1-5">B</label>
+          <input type="range" min="0" max="255" value="{{b}}" class="pure-u-3-5">
+          <span class="pure-u-1-5">{{b}}</span>
+        </div>
+
+      </div>
+      <div id="preview" style="background-color: rgb({{r}},{{g}},{{b}})" class="pure-u-1-5">&nbsp;</div>
+
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      publish: {
+        r: { value: 0, reflect: true },
+        g: { value: 0, reflect: true },
+        b: { value: 0, reflect: true }
+      }
+    });
+  </script>
+</polymer-element>
+

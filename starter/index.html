@@ -1,0 +1,54 @@
+﻿<!doctype html>
+<html>
+
+<head>
+  <title>RGB Demo</title>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+  <!-- Polymer polyfills -->
+  <script src="../components/platform/platform.js"></script>
+
+  <link rel="import" href="demo/demo-rgb.html">
+</head>
+
+<body>
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">Polymer Example</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="col-md-8 col-md-offset-2 jumbotron text-center">
+    <div class="row">
+
+      <div class="col-md-6">
+        <p>
+          This is an example web component using Polymer.
+        </p>
+        <em>
+          Take a look at the DOM when you slide the sliders to see the attributes updating in real-time.
+        </em>
+      </div>
+
+      <div class="col-md-6">
+        <div class="well">
+          <!-- The rgb attributes here will set this component to orange -->
+          <demo-rgb r="255" g="128" b="0"></demo-rgb>
+        </div>
+
+        <small class="text-muted">
+          While this page uses <a href="http://getbootstrap.com/">Bootstrap 3</a>,
+          internally the component uses the <a href="http://purecss.io/grids/">Pure CSS</a> grid library
+          to demonstrate the component's includes do not affect the outside DOM.
+        </small>
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
